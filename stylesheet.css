@@ -139,7 +139,7 @@ form {
     border-color: green;
 }
 
-.data input:invalid {
+.data input:invalid.invalid {
     border-color: red;
 }
 
@@ -173,7 +173,7 @@ input[type="submit"] {
     color: inherit;
 }
 
-.error {
+p.error {
     color: red;
     margin-top: 0px;
     visibility: hidden;
