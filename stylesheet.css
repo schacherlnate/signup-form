@@ -1,0 +1,93 @@
+html {
+    font-size: 16;
+    font-family:'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    --bright-white: #f8f8f8;
+    --gray-white: #f0f0f0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    background-color: #202020;
+    height: 1000px;
+    width: 1350px;
+}
+
+.picture-page {
+    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+    width: 40%;
+    height: 1000px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-page {
+    padding: 0;
+    height: 1000px;
+    width: 60%;
+}
+
+.company-title {
+    background-color: rgb(10, 10, 10, 0.75);
+    font-size: 4rem;
+    margin-top: 180px;
+    width: 100%;
+    text-align: center;
+    color: var(--gray-white);
+    position: relative;
+}
+
+.header, .submit {
+    background-color: var(--gray-white);
+}
+
+.data {
+    background-color: var(--bright-white);
+    height: 30%;
+
+    /* flexbox params*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 15px 50px;
+}
+
+form > div {
+    margin: 0;
+    padding: 20px 50px;
+    height: 35%;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+form {
+    height: 1000px;
+}
+
+.data .input {
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.data input {
+    border-radius: 5px;
+    border-color: #c0c0c0;
+    border-width: 2px;
+}
