@@ -1,10 +1,19 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./Norse-Bold.otf)
+}
+
 html {
     font-size: 16;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     --bright-white: #f8f8f8;
     --gray-white: #f0f0f0;
-    --button-green: #686;
+    --button-green: #575;
+    --data-text-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 *,
@@ -15,7 +24,7 @@ html {
 
 body {
     display: flex;
-    background-color: #202020;
+    background-color: #101010;
     height: 1000px;
     width: 1350px;
 }
@@ -39,13 +48,19 @@ body {
 }
 
 .company-title {
-    background-color: rgb(10, 10, 10, 0.75);
-    font-size: 4rem;
+    background-color: rgb(10, 10, 10, 0.55);
+    font-size: 5.5rem;
     width: 100%;
     text-align: center;
     color: var(--gray-white);
     position: relative;
-    margin-top: 278px;
+    margin-top: 220px;
+    font-family: "Norse-Bold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
 }
 
 .header, .submit {
@@ -78,7 +93,9 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-    gap: 15px 50px;
+    gap: 15px 70px;
+    position: relative;
+    box-shadow: 0 10px 10px #b8b8b8;
 }
 
 form > div {
@@ -102,16 +119,32 @@ form {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    color: var(--data-text-color);
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .data input {
     border-radius: 5px;
-    border-color: #c0c0c0;
+    border-color: #e0e0e0;
     border-width: 2px;
+    border-style: solid;
+    font-size: inherit;
+    color: inherit;
+    height: 2.5em;
+    font-weight: inherit;
+}
+
+.data input:valid {
+    border-color: green;
+}
+
+.data input:invalid {
+    border-color: red;
 }
 
 .data > h3 {
-    color: #303030;
+    color: var(--data-text-color);
 }
 
 input[type="submit"] {
@@ -124,6 +157,18 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-a {
+.submit a {
     color: var(--button-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.picture-page p {
+    color: var(--bright-white);
+    font-size: 0.8em;
+}
+
+.picture-page a, .picture-page a:focus,
+.picture-page a::after {
+    color: inherit;
 }
