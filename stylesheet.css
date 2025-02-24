@@ -127,7 +127,7 @@ form {
 .data input {
     border-radius: 5px;
     border-color: #e0e0e0;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     font-size: inherit;
     color: inherit;
@@ -171,4 +171,10 @@ input[type="submit"] {
 .picture-page a, .picture-page a:focus,
 .picture-page a::after {
     color: inherit;
+}
+
+.error {
+    color: red;
+    margin-top: 0px;
+    visibility: hidden;
 }
