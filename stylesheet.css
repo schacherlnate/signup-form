@@ -1,9 +1,10 @@
 html {
     font-size: 16;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     --bright-white: #f8f8f8;
     --gray-white: #f0f0f0;
+    --button-green: #686;
 }
 
 *,
@@ -40,15 +41,32 @@ body {
 .company-title {
     background-color: rgb(10, 10, 10, 0.75);
     font-size: 4rem;
-    margin-top: 180px;
     width: 100%;
     text-align: center;
     color: var(--gray-white);
     position: relative;
+    margin-top: 278px;
 }
 
 .header, .submit {
     background-color: var(--gray-white);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.submit {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 40px;
+    align-items: flex-start;
 }
 
 .data {
@@ -69,7 +87,7 @@ form > div {
     height: 35%;
 }
 
-h2 {
+h2, h3 {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -90,4 +108,22 @@ form {
     border-radius: 5px;
     border-color: #c0c0c0;
     border-width: 2px;
+}
+
+.data > h3 {
+    color: #303030;
+}
+
+input[type="submit"] {
+    background-color: var(--button-green);
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.25rem;
+    padding: 18px 40px;
+    font-weight: bold;
+}
+
+a {
+    color: var(--button-green);
 }
