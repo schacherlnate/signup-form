@@ -41,20 +41,14 @@ body {
     align-items: center;
 }
 
-.info-page {
-    padding: 0;
-    height: 1000px;
-    width: 60%;
-}
-
 .company-title {
     background-color: rgb(10, 10, 10, 0.55);
     font-size: 5.5rem;
     width: 100%;
     text-align: center;
     color: var(--gray-white);
+    margin-top: 0;
     position: relative;
-    margin-top: 220px;
     font-family: "Norse-Bold";
     display: flex;
     justify-content: center;
@@ -63,8 +57,30 @@ body {
     padding: 10px 0;
 }
 
-.header, .submit {
-    background-color: var(--gray-white);
+.picture-page p {
+    color: var(--bright-white);
+    font-size: 0.8em;
+}
+
+.picture-page a, .picture-page a:focus,
+.picture-page a::after {
+    color: inherit;
+}
+
+.info-page {
+    padding: 0;
+    height: 1000px;
+    width: 60%;
+}
+
+form {
+    height: 1000px;
+}
+
+form > div {
+    margin: 0;
+    padding: 20px 50px;
+    height: 35%;
 }
 
 .header {
@@ -76,12 +92,10 @@ body {
     padding-bottom: 40px;
 }
 
-.submit {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-top: 40px;
-    align-items: flex-start;
+h2, h3 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .data {
@@ -96,22 +110,6 @@ body {
     gap: 15px 70px;
     position: relative;
     box-shadow: 0 10px 10px #b8b8b8;
-}
-
-form > div {
-    margin: 0;
-    padding: 20px 50px;
-    height: 35%;
-}
-
-h2, h3 {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-form {
-    height: 1000px;
 }
 
 .data .input {
@@ -147,6 +145,24 @@ form {
     color: var(--data-text-color);
 }
 
+p.error {
+    color: red;
+    margin-top: 0px;
+    visibility: hidden;
+}
+
+.submit {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 40px;
+    align-items: flex-start;
+}
+
+.header, .submit {
+    background-color: var(--gray-white);
+}
+
 input[type="submit"] {
     background-color: var(--button-green);
     border: 0;
@@ -161,20 +177,4 @@ input[type="submit"] {
     color: var(--button-green);
     text-decoration: none;
     font-weight: bold;
-}
-
-.picture-page p {
-    color: var(--bright-white);
-    font-size: 0.8em;
-}
-
-.picture-page a, .picture-page a:focus,
-.picture-page a::after {
-    color: inherit;
-}
-
-p.error {
-    color: red;
-    margin-top: 0px;
-    visibility: hidden;
 }
