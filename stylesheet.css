@@ -7,9 +7,9 @@ html {
     font-size: 16;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
-    --bright-white: #f8f8f8;
-    --gray-white: #f0f0f0;
-    --button-green: #575;
+    --data-background: #f8f8f8;
+    --header-submit-background: #f0f0f0;
+    --button-background: #575;
     --data-text-color: #303030;
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@ body {
     font-size: 5.5rem;
     width: 100%;
     text-align: center;
-    color: var(--gray-white);
+    color: var(--header-submit-background);
     margin-top: 0;
     position: relative;
     font-family: "Norse-Bold";
@@ -58,7 +58,7 @@ body {
 }
 
 .picture-page p {
-    color: var(--bright-white);
+    color: var(--data-background);
     font-size: 0.8em;
 }
 
@@ -75,21 +75,25 @@ body {
 
 form {
     height: 1000px;
+    --offset-from-data: 40px;
+    --data-height: 30%;
+    --header-submit-height: calc((100% - var(--data-height)) / 2);
 }
 
 form > div {
     margin: 0;
     padding: 20px 50px;
-    height: 35%;
 }
 
 .header {
+    background-color: var(--header-submit-background);
+    padding-bottom: var(--offset-from-data);
+    height: var(--header-submit-height);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     gap: 40px;
-    padding-bottom: 40px;
 }
 
 h2, h3 {
@@ -99,8 +103,8 @@ h2, h3 {
 }
 
 .data {
-    background-color: var(--bright-white);
-    height: 30%;
+    background-color: var(--data-background);
+    height: var(--data-height);
 
     /* flexbox params*/
     display: flex;
@@ -152,19 +156,17 @@ p.error {
 }
 
 .submit {
+    background-color: var(--header-submit-background);
+    padding-top: var(--offset-from-data);
+    height: var(--header-submit-height);
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding-top: 40px;
     align-items: flex-start;
 }
 
-.header, .submit {
-    background-color: var(--gray-white);
-}
-
 input[type="submit"] {
-    background-color: var(--button-green);
+    background-color: var(--button-background);
     border: 0;
     border-radius: 6px;
     color: white;
@@ -174,7 +176,7 @@ input[type="submit"] {
 }
 
 .submit a {
-    color: var(--button-green);
+    color: var(--button-background);
     text-decoration: none;
     font-weight: bold;
 }
